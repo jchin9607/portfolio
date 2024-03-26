@@ -43,7 +43,7 @@ header {
 .landing {
     /* background-color: var(--primary-color); */
     color: var(--text-color);
-    min-height: 100vh;
+    min-height: 100lvh;
     padding: 60px var(--padding);
     padding-bottom: 9%;
     flex-direction: column;

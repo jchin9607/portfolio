@@ -76,12 +76,12 @@ var observerz = new IntersectionObserver(function(entries) {
       document.querySelector('.navwindow').style.backgroundColor = 'var(--primary-color)'
       document.querySelector('.navwindow').style.color = 'var(--text-color)'
       
-      console.log('Element is in the viewport!');
+      // console.log('Element is in the viewport!');
     } else {
       document.querySelector('header').style.color = 'var(--text-color)';
       document.querySelector('.navwindow').style.backgroundColor = 'var(--secondary-color)'
       document.querySelector('.navwindow').style.color = 'var(--primary-color)'
-      console.log('Element is NOT in the viewport!');
+      // console.log('Element is NOT in the viewport!');
     }
   });
 }, {

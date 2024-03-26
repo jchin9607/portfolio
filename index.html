@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body id="my-scrollbar">
+    <header>
+        <h1 class="logo">LC</h1>
+        <i class="fa-solid fa-bars" onClick="openNav()"></i>
+    </header>
+    
+    <div class="butter">
+        <div class="landing page" id="landing">
+                
+                <div class="intro not-focused">
+                    <h1>Hey I'm</h1>
+                    <h1>Lucas Chin.</h1>
+                </div>
+                <div class="intro not-focused">
+                    <h1>Hey I'm</h1>
+                    <h1>Lucas Chin.</h1>
+                </div>
+                <div class="intro not-focused">
+                    <h1>Hey I'm</h1>
+                    <h1>Lucas Chin.</h1>
+                </div>
+
+            <p>⭐ I'm a student, artist, and web designer.</p>
+        </div>
+        
+        <div class="graaay">
+            <div class="about graybg" id="about">
+                <h1>About Me.</h1>
+                <div class="textabout">
+                    <p>I'm a sophomore at BHS and I am interested in web design, Python, and Biology🐣✨</p>
+                    <div class="image">
+                        <img src="https://ik.imagekit.io/64c35uuyg/b4stembio/lucas.png?updatedAt=1711050748800" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects graybg" id="projects" >
+                <h1>My Projects.</h1>
+                <div class="grid">
+                    <div class="card">
+                        <img src="img/bostonforstem.png" alt="" onClick="cardClick('https://www.bostonforstem.org/')">
+                        <h3>Boston For Stem</h3>
+                    </div>
+                    <div class="card">
+                        <img src="img/grantdu.png" alt="" onClick="cardClick('https://jchin9607.github.io/grantduportfolio/index.html')">
+                        <h3>Grant's Art Portfolio</h3>
+                    </div>
+                    <div class="card">
+                        <img src="img/andrewge.png" alt="" onClick="cardClick('https://jchin9607.github.io/andrewgephotogallery/')">
+                        <h3>Andrew's Photogallery</h3>
+                    </div>
+                    
+                </div>
+
+                <div class="experience graybg" id="experience">
+                    <h1 class="work">Work</h1>
+                    <a href="https://www.linkedin.com/in/lucas-chin-417bab292" target="_blank"><button>View LinkedIn</button></a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="contact" id="contact">
+                <!-- <h1 class="not-focused">CONTACT </h1> -->
+                <h1>CONTACT</h1>
+                <!-- <h1 class="not-focused"> CONTACT</h1> -->
+            </div>
+            
+            <nav>
+                <div class="links">
+                    <div class="inspo">
+                        <h3>INSPO</h3>
+                        <a href="https://www.huyng.xyz" target="_blank">Huy Ng</a>
+                        <a href="https://www.rachelhow.com" target="_blank">Rachel How</a>
+                        <a href="https://obys.agency/" target="_blank">Obys Agency</a></a>
+                    </div>
+                    <div class="socials">
+                        <h3>SOCIALS</h3>
+                        <a href="https://www.instagram.com/lucasj.chin" target="_blank">Instagram</a>
+                        <a href="https://twitter.com/fuku9607" target="_blank">Twitter</a>
+                        <a href="https://www.linkedin.com/in/lucas-chin-417bab292" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/jchin9607" target="_blank">Github</a>
+                        <a href="mailto:chin.cc4609@gmail.com" target="_blank">Email</a>
+                    </div>
+                </div>
+                <!-- <p>Insta, Twitter, LinkedIn, Github</p> -->
+                <div class="copyright">
+                    <p>© 2024</p>
+                    <p>Lucas Chin</p>
+                </div>
+            </nav>
+            
+        </footer>
+
+        
+        <!-- <svg>
+            <filter id="grainy">
+                <feTurbulence type="turbulence" baseFrequency="0.65" />
+            </filter>
+        </svg> -->
+
+    </div>
+    <div class="navwindow" id="my-nav">
+        <div class="x" >
+            <p onClick="closeNav()">x</p>
+        </div>
+        <div class="navsec">
+            <a href="#landing">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <script src="node_modules\smooth-scrollbar\dist\smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+        var options = {
+            "wheelEventTarget": null,
+            "damping": 0.07,
+        }
+        Scrollbar.init(document.querySelector('.butter'), options);
+
+        // function scrollinganchor() {
+        //     var slider = document.getElementById('about');
+        //     var elDistanceToTop = window.pageYOffset + slider.getBoundingClientRect().top
+
+        //     scrollTo(0, elDistanceToTop);
+        // }
+        document.querySelectorAll("a[href*='#']").forEach(el => {
+            el.addEventListener("click", () => {
+                Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+            })
+        })
+    </script>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

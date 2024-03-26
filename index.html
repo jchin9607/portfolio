@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/index.1303bb05.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
@@ -12,7 +12,7 @@
 <body id="my-scrollbar">
     <header>
         <h1 class="logo">LC</h1>
-        <i class="fa-solid fa-bars" onClick="openNav()"></i>
+        <i class="fa-solid fa-bars" onclick="openNav()"></i>
     </header>
     
     <div class="butter">
@@ -45,19 +45,19 @@
                 </div>
             </div>
 
-            <div class="projects graybg" id="projects" >
+            <div class="projects graybg" id="projects">
                 <h1>My Projects.</h1>
                 <div class="grid">
                     <div class="card">
-                        <img src="img/bostonforstem.png" alt="" onClick="cardClick('https://www.bostonforstem.org/')">
+                        <img src="/bostonforstem.aa05b1dc.png" alt="" onclick="cardClick('https://www.bostonforstem.org/')">
                         <h3>Boston For Stem</h3>
                     </div>
                     <div class="card">
-                        <img src="img/grantdu.png" alt="" onClick="cardClick('https://jchin9607.github.io/grantduportfolio/index.html')">
+                        <img src="/grantdu.b9c95629.png" alt="" onclick="cardClick('https://jchin9607.github.io/grantduportfolio/index.html')">
                         <h3>Grant's Art Portfolio</h3>
                     </div>
                     <div class="card">
-                        <img src="img/andrewge.png" alt="" onClick="cardClick('https://jchin9607.github.io/andrewgephotogallery/')">
+                        <img src="/andrewge.1c8ec8c5.png" alt="" onclick="cardClick('https://jchin9607.github.io/andrewgephotogallery/')">
                         <h3>Andrew's Photogallery</h3>
                     </div>
                     
@@ -83,7 +83,7 @@
                         <h3>INSPO</h3>
                         <a href="https://www.huyng.xyz" target="_blank">Huy Ng</a>
                         <a href="https://www.rachelhow.com" target="_blank">Rachel How</a>
-                        <a href="https://obys.agency/" target="_blank">Obys Agency</a></a>
+                        <a href="https://obys.agency/" target="_blank">Obys Agency</a>
                     </div>
                     <div class="socials">
                         <h3>SOCIALS</h3>
@@ -112,8 +112,8 @@
 
     </div>
     <div class="navwindow" id="my-nav">
-        <div class="x" >
-            <p onClick="closeNav()">x</p>
+        <div class="x">
+            <p onclick="closeNav()">x</p>
         </div>
         <div class="navsec">
             <a href="#landing">Home</a>
@@ -123,34 +123,31 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
-    <script src="./node_modules/smooth-scrollbar/dist/smooth-scrollbar.js"></script>
+    <script src="/index.e10b7b6b.js"></script>
 
-    <script>
-        
-        var Scrollbar = window.Scrollbar;
-        var options = {
-            "wheelEventTarget": null,
-            "damping": 0.07,
-        }
-        Scrollbar.init(document.querySelector('.butter'), options);
+    <script>var Scrollbar = window.Scrollbar;
+var options = {
+    "wheelEventTarget": null,
+    "damping": 0.07
+};
+Scrollbar.init(document.querySelector(".butter"), options);
+document.querySelectorAll("a[href*='#']").forEach((el)=>{
+    el.addEventListener("click", ()=>{
+        Scrollbar.init(document.querySelector(".butter")).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)));
+    });
+}) // if (!isMobile) {
+ //     Scrollbar.init(document.querySelector('.butter'), options);
+ //     document.querySelectorAll("a[href*='#']").forEach(el => {
+ //         el.addEventListener("click", () => {
+ //             Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+ //         })
+ //     })
+ // }
+;
 
-        document.querySelectorAll("a[href*='#']").forEach(el => {
-            el.addEventListener("click", () => {
-                Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-            })
-        })
-
-        // if (!isMobile) {
-        //     Scrollbar.init(document.querySelector('.butter'), options);
-        //     document.querySelectorAll("a[href*='#']").forEach(el => {
-        //         el.addEventListener("click", () => {
-        //             Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-        //         })
-        //     })
-        // }
-    </script>
+</script>
 
     
-    <script src="script.js"></script>
-</body>
+    <script src="/index.672d4772.js"></script>
+<script src="/newport.3464ddca.js"></script></body>
 </html>

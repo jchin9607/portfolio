@@ -1,28 +1,45 @@
-const headers = document.querySelectorAll('.intro');
+function isSafariMobile() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !!(navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match('CriOS'));
+}
 
-let currentHeader = null;
+// var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        if (currentHeader) {
-          currentHeader.classList.add('not-focused');
+
+
+if (isSafariMobile() == false) {
+  
+  const headers = document.querySelectorAll('.intro');
+  let currentHeader = null;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (currentHeader) {
+            currentHeader.classList.add('not-focused');
+          }
+          entry.target.classList.remove('not-focused');
+          currentHeader = entry.target;
         }
-        entry.target.classList.remove('not-focused');
-        currentHeader = entry.target;
-      }
-    });
-  },
-  {
-    threshold: 0.3,
-    rootMargin: '0% 0px -80% 0px',
-  }
-);
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0% 0px -80% 0px',
+    }
+  );
 
-headers.forEach((header) => {
-  observer.observe(header);
-});
+  headers.forEach((header) => {
+    observer.observe(header);
+  });
+}
+else {
+  document.querySelector('.intro').classList.remove('not-focused');
+  const introElements = document.querySelectorAll('.intro');
+  const lastIntroElement = introElements[introElements.length - 1];
+  lastIntroElement.classList.remove('not-focused');
+}
+
 
 const text = document.querySelectorAll('.textabout, .projects img, .experience a');
 

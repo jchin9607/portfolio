@@ -132,13 +132,17 @@
             "wheelEventTarget": null,
             "damping": 0.07,
         }
-        Scrollbar.init(document.querySelector('.butter'), options);
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (!isMobile) {
+            Scrollbar.init(document.querySelector('.butter'), options);
 
-        document.querySelectorAll("a[href*='#']").forEach(el => {
-            el.addEventListener("click", () => {
-                Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+            document.querySelectorAll("a[href*='#']").forEach(el => {
+                el.addEventListener("click", () => {
+                    Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+                })
             })
-        })
+        }
+        
 
         // if (!isMobile) {
         //     Scrollbar.init(document.querySelector('.butter'), options);

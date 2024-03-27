@@ -231,7 +231,7 @@ footer {
 .contact {
     padding-top: 60px;
     font-size: 10vw;
-    height: 40vh;
+    height: 40svh;
     display: flex;
     flex-direction: row;
     justify-content: center;

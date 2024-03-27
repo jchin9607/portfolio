@@ -1,8 +1,5 @@
 {
   "dependencies": {
     "smooth-scrollbar": "^8.8.4"
-  },
-  "devDependencies": {
-    "parcel": "^2.12.0"
   }
 }

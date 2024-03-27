@@ -226,12 +226,13 @@ footer {
     
     padding-bottom: 0;
     position: sticky;
+    margin-top: 2px;
 }
 
 .contact {
     padding-top: 60px;
     font-size: 10vw;
-    height: 40svh;
+    height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: center;

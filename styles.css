@@ -23,6 +23,8 @@ body {
 .butter {
     height: 100vh;
     width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -92,6 +94,28 @@ header {
     color: var(--primary-color);
     
 }
+
+.prlximg {
+    /* padding: 0 var(--padding); */
+    background-color: var(--secondary-color);
+    width: 100vw;
+    height: 55vh;
+    overflow-y: hidden;
+    
+}
+
+.prlximg img {
+    border-radius: 90px; 
+     
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    object-position: 50% 68%;
+    
+    
+}
+
+
 
 .about h1 {
     font-size: 7rem;
@@ -312,6 +336,10 @@ img:hover {
     transform: scale(1.05);
     cursor: pointer;
     transition: 1s;
+}
+
+.prlximg img:hover {
+    transform: scale(1);
 }
 
 .in-view {

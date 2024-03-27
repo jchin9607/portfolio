@@ -45,6 +45,10 @@
                 </div>
             </div>
 
+            <div class="prlximg">
+                <img src="img/IMG_1079.JPG" alt="">
+            </div>
+
             <div class="projects graybg" id="projects" >
                 <h1>My Projects.</h1>
                 <div class="grid">
@@ -123,9 +127,11 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
+    
     <script src="smooth-scrollbar.js"></script>
 
     <script>
+       
         
         var Scrollbar = window.Scrollbar;
         var options = {
@@ -141,6 +147,13 @@
                     Scrollbar.init(document.querySelector('.butter')).scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
                 })
             })
+
+            Scrollbar.init(document.querySelector('.butter')).addListener(({ offset }) => {
+            // Adjust the position of parallax elements based on the scroll offset
+                const parallaxElement = document.querySelector('.prlximg img');
+                console.log(-offset.y * 0.01)
+                parallaxElement.style.objectPosition = `50% ${63  + offset.y * 0.003}%`;
+            });
         }
         
 

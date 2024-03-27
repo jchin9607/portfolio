@@ -109,3 +109,4 @@ var observerz = new IntersectionObserver(function(entries) {
 observerz.observe(document.querySelector('.graaay'));
 // observerz.observe(document.getElementById('projects'));
 // observerz.observe(document.getElementById('experience'));
+

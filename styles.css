@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     --padding: 15%;
-    --primary-color: #f6f7f2;
+    --primary-color: #f7f4f2;
     --secondary-color: rgb(8, 8, 7);
     --text-color: #000;
     --secondary-text-color: #fff;
@@ -149,6 +149,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .projects {
@@ -338,6 +339,7 @@ img:hover {
     cursor: pointer;
     transition: 1s;
 }
+
 
 .prlximg img:hover {
     transform: scale(1);

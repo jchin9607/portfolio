@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     --padding: 15%;
-    --primary-color: #f7f4f2;
+    --primary-color: rgb(244, 243, 240);
     --secondary-color: rgb(8, 8, 7);
     --text-color: #000;
     --secondary-text-color: #fff;
@@ -558,7 +558,7 @@ img:hover {
     }
 
     .links a {
-        font-size: 3vh;
+        font-size: 2vh;
     }
 
     nav a {

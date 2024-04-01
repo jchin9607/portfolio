@@ -101,7 +101,7 @@ header {
     width: 100vw;
     height: 55vh;
     overflow-y: hidden;
-    
+    /* margin: calc(60px + 3%) 0; */
 }
 
 .prlximg img {
@@ -177,11 +177,21 @@ header {
     justify-content: flex-start;
 }
 
-/* .card {
-    border: 1px solid var(--primary-color);
-    padding: 20px;
-    border-radius: 20px;
-} */
+.card {
+    /* border: 1px solid var(--primary-color); */
+    padding: 3vw;
+    /* border-radius: 20px; */
+    border-top: 1px solid var(--grey-text);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardtext {
+    width: 100%;
+}
 
 
 .card h3 {
@@ -192,10 +202,15 @@ header {
 }
 
 .card img {
-    width: 30vw;
+    /* width: 30vw; */
+
+    width: 100%;
+    height: auto;
+
     object-fit: cover;
     border-radius: 20px;
-    border: 1px solid var(--primar-color);
+    border: 1px solid var(--grey-text);
+    align-self: center;
 }
 
 .experience {
@@ -472,7 +487,11 @@ img:hover {
 @media screen and (max-width: 840px)
 {
     .card img {
-        width: 70vw;
+        width: 100%;
+    }
+
+    .card h3 {
+        font-size: 1.8rem;
     }
     .grid {
         justify-content: center;
@@ -528,7 +547,7 @@ img:hover {
     }
 
     .card h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .navwindow {

@@ -41,7 +41,7 @@ else {
 }
 
 
-const text = document.querySelectorAll('.textabout, .projects img, .experience a');
+const text = document.querySelectorAll('.textabout, .projects .card, .experience a');
 
 const scrollAnime = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

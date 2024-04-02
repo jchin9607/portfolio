@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +18,15 @@
         <div class="landing page" id="landing">
                 
                 <div class="intro">
-                    <h1>Hey I'm</h1>
+                    <h1>Hi, I'm</h1>
                     <h1>Lucas Chin.</h1>
                 </div>
                 <div class="intro not-focused">
-                    <h1>Hey I'm</h1>
+                    <h1>Hi, I'm</h1>
                     <h1>Lucas Chin.</h1>
                 </div>
                 <div class="intro not-focused">
-                    <h1>Hey I'm</h1>
+                    <h1>Hi, I'm</h1>
                     <h1>Lucas Chin.</h1>
                 </div>
 
@@ -38,16 +37,16 @@
             <div class="about graybg" id="about">
                 <h1>About Me.</h1>
                 <div class="textabout">
-                    <p>I'm a sophomore at BHS and I am interested in web design, Python, and Biology🐣✨</p>
+                    <p>I'm a sophomore at BHS and I am interested in web design, Python, and Biology✨</p>
                     <div class="image">
                         <img src="https://ik.imagekit.io/64c35uuyg/b4stembio/lucas.png?updatedAt=1711050748800" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="prlximg">
+            <!-- <div class="prlximg">
                 <img src="img/IMG_1079.JPG" alt="">
-            </div>
+            </div> -->
 
             <div class="projects graybg" id="projects" >
                 <h1>My Projects.</h1>
@@ -60,11 +59,15 @@
                     </div>
                     <div class="card">
                         <img src="img/grantdu.png" alt="" onClick="cardClick('https://jchin9607.github.io/grantduportfolio/index.html')">
-                        <h3>Grant's Art Portfolio</h3>
+                        <div class="cardtext">
+                            <h3>Grant's Art Portfolio</h3>
+                        </div>
                     </div>
                     <div class="card">
                         <img src="img/andrewge.png" alt="" onClick="cardClick('https://jchin9607.github.io/andrewgephotogallery/')">
-                        <h3>Andrew's Photogallery</h3>
+                        <div class="cardtext">
+                            <h3>Andrew's Photogallery</h3>
+                        </div>
                     </div>
                     
                 </div>
@@ -132,6 +135,12 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
+
+    <div class="loading-screen">
+        <div class="loader">
+            <p>LC Portfolio 2024</p>
+        </div>
+    </div>
     
     <script src="smooth-scrollbar.js"></script>
 
@@ -153,12 +162,12 @@
                 })
             })
 
-            Scrollbar.init(document.querySelector('.butter')).addListener(({ offset }) => {
-            // Adjust the position of parallax elements based on the scroll offset
-                const parallaxElement = document.querySelector('.prlximg img');
-                console.log(-offset.y * 0.01)
-                parallaxElement.style.objectPosition = `50% ${63  + offset.y * 0.003}%`;
-            });
+            // Scrollbar.init(document.querySelector('.butter')).addListener(({ offset }) => {
+            // // Adjust the position of parallax elements based on the scroll offset
+            //     const parallaxElement = document.querySelector('.prlximg img');
+            //     console.log(-offset.y * 0.01)
+            //     parallaxElement.style.objectPosition = `50% ${63  + offset.y * 0.003}%`;
+            // });
         }
         
 

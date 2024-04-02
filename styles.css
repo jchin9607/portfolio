@@ -1,21 +1,28 @@
+@font-face {
+    font-family: "abc";
+    src: url("GeneralSans_Complete/Fonts/Variable/GeneralSans-Variable.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     --padding: 15%;
-    --primary-color: rgb(244, 243, 240);
+    --primary-color: rgb(249, 249, 250);
     --secondary-color: rgb(8, 8, 7);
     --text-color: #000;
     --secondary-text-color: #fff;
     --highlight: #000;
     --grey-text: #b8b8b8;
-    font-family: "DM Sans", sans-serif;
+    font-family: "abc", sans-serif;
 }
 
 
 
 body {
     background-color: var(--primary-color);
+    background-image: url(img/jjk2.png);
+    background-size: cover;
     
     /* backdrop-filter: url(#grainy); */
 }
@@ -32,7 +39,7 @@ header {
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 var(--padding);
+    padding: 0 3%;
     /* background-color: var(--primary-color); */
     position: fixed;
     top: 0;
@@ -46,15 +53,22 @@ header {
     /* background-color: var(--primary-color); */
     color: var(--text-color);
     min-height: 100lvh;
-    padding: 60px var(--padding);
+    padding: 80px var(--padding);
     padding-bottom: 9%;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: myAnimation linear;
-    animation-timeline: view(0 170vh); 
+    opacity: 0;
+    translate: 0 100px;
+    transition: opacity 1.6s, translate 1.6s;
+    margin-bottom: 2px;
+}
+
+.go-in {
+    opacity: 1;
+    translate: 0;
 }
 
 .landing .intro {
@@ -87,10 +101,10 @@ header {
     padding: calc(60px + 3%) var(--padding);
     display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
-    border-radius: 90px;
+    /* background-color: var(--secondary-color);
+    border-radius: 9vw;
     border-bottom-left-radius: 0 0;
-    border-bottom-right-radius: 0 0;
+    border-bottom-right-radius: 0 0; */
     color: var(--primary-color);
     
 }
@@ -120,6 +134,7 @@ header {
 .about h1 {
     font-size: 7rem;
     margin-bottom: 70px;
+    font-weight: 550;
 }
 
 .about img {
@@ -158,16 +173,23 @@ header {
     
     display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     color: var(--primary-color);
-    border-radius: 90px;
+    /* border-radius: 9vw;
     border-top-left-radius: 0 0;
-    border-top-right-radius: 0 0;
+    border-top-right-radius: 0 0; */
+}
+
+.graaay {
+    background-color: var(--secondary-color);
+    border-radius: 10vw;
+    transition: border-radius 0.5s;
 }
 
 .projects h1 {
     font-size: 7rem;
     margin-bottom: 70px;
+    font-weight: 550;
 }
 
 .grid {
@@ -179,9 +201,9 @@ header {
 
 .card {
     /* border: 1px solid var(--primary-color); */
-    padding: 3vw;
+    padding: 3vw 0;
     /* border-radius: 20px; */
-    border-top: 1px solid var(--grey-text);
+    /* border-bottom: 1px solid var(--grey-text); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -247,7 +269,7 @@ footer {
 
 .contact {
     padding-top: 60px;
-    font-size: 10vw;
+    font-size: 9.6vw;
     height: 40vh;
     display: flex;
     flex-direction: row;
@@ -265,7 +287,7 @@ footer {
 
 nav {
     height: 60vh;
-    padding: 60px 5%;
+    padding: 60px 3%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -356,7 +378,7 @@ img:hover {
 }
 
 
-.prlximg img:hover {
+.prlximg img:hover, .card img {
     transform: scale(1);
 }
 
@@ -386,7 +408,7 @@ img:hover {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 14%;
+    right: 2%;
     width: 400px;
     z-index: 999;
     color: var(--primary-color);
@@ -471,7 +493,7 @@ img:hover {
     }
 
     .navwindow {
-        right: 9%;
+        right: 2%;
     }
     .landing .intro {
         font-size: 6.5vw;
@@ -481,6 +503,19 @@ img:hover {
     .landing p {
         margin-top: 70px;
         font-size: 1.5rem;
+    }
+    header h1 {
+        font-size: 1rem;
+    }
+    .about h1 {
+        font-size: 3.8rem;
+        margin-bottom: 30px;
+    }
+    .projects h1 {
+        font-size: 3.8rem;
+    }
+    .experience h1 {
+        font-size: 3.8rem;
     }
 }
 
@@ -500,7 +535,7 @@ img:hover {
 
 @media screen and (max-width: 800px) {
     .not-focused {
-        color: var(--primary-color);
+        /* color: var(--primary-color); */
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
     }
@@ -527,20 +562,23 @@ img:hover {
     .about img {
         width: 300px;
     }
+    .links a {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .about h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 30px;
     }.about p {
         font-size: 1.5rem;
     }
     .projects h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .experience h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .contact h1 {
         font-size: 16vw;
@@ -576,6 +614,10 @@ img:hover {
         
     }
 
+    .links h3 {
+        font-size: 3vh;
+    }
+
     .links a {
         font-size: 2vh;
     }
@@ -589,4 +631,50 @@ img:hover {
         padding-bottom: 30px;
     }
 }
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 1.2s, translate 1.2s, border-radius 1.2s;
+}
+
+.loader {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    
+}
+
+.loading-screen-hidden {
+    border-radius: 0 0 100% 100%;
+    translate: 0 -100vh;
+    visibility: hidden;
+}
+
+.loader {
+    width: 450px;
+    animation: typing 1.5s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 

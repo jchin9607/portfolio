@@ -41,7 +41,7 @@ else {
 }
 
 
-const text = document.querySelectorAll('.textabout, .projects .card, .experience a');
+const text = document.querySelectorAll('.about, .projects, .card, .experience');
 
 const scrollAnime = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -92,12 +92,15 @@ var observerz = new IntersectionObserver(function(entries) {
       document.querySelector('header').style.color = 'var(--primary-color)';
       document.querySelector('.navwindow').style.backgroundColor = 'var(--primary-color)'
       document.querySelector('.navwindow').style.color = 'var(--text-color)'
+      document.querySelector('.graaay').style.borderTopLeftRadius = '0'
+      document.querySelector('.graaay').style.borderTopRightRadius = '0'
       
       // console.log('Element is in the viewport!');
     } else {
       document.querySelector('header').style.color = 'var(--text-color)';
       document.querySelector('.navwindow').style.backgroundColor = 'var(--secondary-color)'
       document.querySelector('.navwindow').style.color = 'var(--primary-color)'
+      document.querySelector('.graaay').style.borderRadius = '10vw'
       // console.log('Element is NOT in the viewport!');
     }
   });
@@ -110,3 +113,21 @@ observerz.observe(document.querySelector('.graaay'));
 // observerz.observe(document.getElementById('projects'));
 // observerz.observe(document.getElementById('experience'));
 
+window.addEventListener('load', () => {
+  document.querySelector('.loader').addEventListener('animationend', () => {
+    
+
+    // window.addEventListener('load', () => {
+      const loader = document.querySelector('.loading-screen');
+      loader.classList.add('loading-screen-hidden');
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      document.querySelector('.landing').classList.add('go-in')
+
+      loader.addEventListener('transitionend', () => {
+        document.body.removeChild(loader);
+      });
+
+    // });
+
+  });
+});

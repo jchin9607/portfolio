@@ -113,7 +113,12 @@ observerz.observe(document.querySelector('.graaay'));
 // observerz.observe(document.getElementById('projects'));
 // observerz.observe(document.getElementById('experience'));
 
+
 window.addEventListener('load', () => {
+  //add wait s
+  setTimeout(() => {
+    document.querySelector('.loader').style.display = 'block';
+  }, 400);
   document.querySelector('.loader').addEventListener('animationend', () => {
     
 

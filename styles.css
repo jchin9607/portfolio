@@ -451,7 +451,7 @@ img:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1340px) {
     .landing .intro {
         font-size: 6vw;
         
@@ -665,12 +665,14 @@ img:hover {
 }
 
 .loader {
+    display: none;
     width: 400px;
     animation: typing 1.5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
   }
+
   
   @keyframes typing {
     from {
@@ -683,4 +685,35 @@ img:hover {
       border-color: transparent
     }
   }
+
+@media screen and (max-height: 650px) {
+    .landing .intro {
+        font-size: 5.5vw;
+    }
+    .about h1 {
+        font-size: 6vw;
+    }
+    .about p {
+        font-size: 3.5vw;
+    }
+    .projects h1 {
+        font-size: 6vw;
+    }
+    .projects h3 {
+        font-size: 2.5vw;
+    }
+    .experience h1 {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .loader {
+        width: 210px;
+        font-size: 1.6rem;
+    }
+    .loading-screen-hidden {
+        border-radius: 0 0 20% 20%;
+    }
+}
 

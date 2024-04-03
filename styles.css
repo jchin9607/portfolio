@@ -508,7 +508,7 @@ img:hover {
         font-size: 1.5rem;
     }
     header h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .about h1 {
         font-size: 3.8rem;
@@ -654,7 +654,7 @@ img:hover {
 
 .loader {
     color: var(--primary-color);
-    font-size: 3.5rem;
+    font-size: 3rem;
     
 }
 
@@ -665,7 +665,7 @@ img:hover {
 }
 
 .loader {
-    width: 450px;
+    width: 400px;
     animation: typing 1.5s;
     white-space: nowrap;
     overflow: hidden;

@@ -568,6 +568,9 @@ img:hover {
 }
 
 @media screen and (max-width: 600px) {
+    .landing .intro {
+        font-size: 6vw;
+    }
     .about h1 {
         font-size: 3rem;
         margin-bottom: 30px;

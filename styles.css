@@ -134,7 +134,7 @@ header {
 
 
 .about h1 {
-    font-size: 7rem;
+    font-size: 6.2rem;
     margin-bottom: 70px;
     font-weight: 550;
 }
@@ -189,7 +189,7 @@ header {
 }
 
 .projects h1 {
-    font-size: 7rem;
+    font-size: 6.2rem;
     margin-bottom: 70px;
     font-weight: 550;
 }
@@ -575,23 +575,23 @@ img:hover {
         font-size: 6vw;
     }
     .about h1 {
-        font-size: 4.5rem;
+        font-size: 3rem;
         margin-bottom: 30px;
     }.about p {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
     .projects h1 {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .experience h1 {
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .contact h1 {
         font-size: 16vw;
     }
 
     .card h3 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .navwindow {
@@ -635,6 +635,24 @@ img:hover {
         height: 75vh;
         padding: 0;
         padding-bottom: 30px;
+    }
+    .about h1 {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+    }.about p {
+        font-size: 1.3rem;
+    }
+    .projects h1 {
+        font-size: 2.4rem;
+    }
+    .experience h1 {
+        font-size: 2.4rem;
+    }
+    .contact h1 {
+        font-size: 16vw;
+    }
+    .card h3 {
+        font-size: 1.1rem;
     }
 }
 
@@ -686,24 +704,89 @@ img:hover {
     }
   }
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 650px) and (min-width: 1001px) {
     .landing .intro {
-        font-size: 5.5vw;
+        font-size: 4.3vw;
+    }
+
+    .landing p {
+        font-size: 3vw;
+        margin-top: 40px;
     }
     .about h1 {
         font-size: 6vw;
     }
     .about p {
-        font-size: 3.5vw;
+        font-size: 2.8vw;
     }
     .projects h1 {
         font-size: 6vw;
     }
     .projects h3 {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .experience h1 {
         font-size: 6vw;
+    }
+    .contact h1 {
+        font-size: 17vw;
+    }
+
+    nav .links a {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-height: 650px) and (max-width: 1000px) {
+    .landing .intro {
+        font-size: 5vw;
+    }
+    .landing p {
+        font-size: 5vw;
+        margin-top: 30px;
+    }
+    .about h1 {
+        font-size: 7vw;
+    }
+    .about p {
+        font-size: 3.5vw;
+    }
+    .projects h1 {
+        font-size: 7vw;
+    }
+    .projects h3 {
+        font-size: 3vw;
+    }
+    .experience h1 {
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-height: 650px) and (max-width: 650px) {
+    .landing .intro {
+        font-size: 5.7vw;
+    }
+
+    .landing p {
+        font-size: 5vw;
+        margin-top: 30px;
+    }
+    .about h1 {
+        font-size: 9.7vw;
+    }
+    .about p {
+        font-size: 6vw;
+    }
+    .projects h1 {
+        font-size: 9.7vw;
+    }
+    .projects h3 {
+        font-size: 4vw;
+    }
+    .experience h1 {
+        margin-top: 90px;
+        margin-bottom: 40px;
+        font-size: 9.7vw;
     }
 }
 

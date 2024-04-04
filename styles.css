@@ -134,7 +134,7 @@ header {
 
 
 .about h1 {
-    font-size: 5.35rem;
+    font-size: 5.4rem;
     margin-bottom: 70px;
     font-weight: 550;
 }
@@ -142,6 +142,8 @@ header {
 .about img {
     width: 400px;
     border-radius: 30px;
+    height: 550px;
+    object-fit: cover;
 }
 
 .about .textabout {
@@ -189,7 +191,7 @@ header {
 }
 
 .projects h1 {
-    font-size: 5.35rem;
+    font-size: 5.4rem;
     margin-bottom: 70px;
     font-weight: 550;
 }
